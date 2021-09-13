@@ -29,4 +29,8 @@ extension MainPresenter: MainPresenterProtocol {
             }
         }
     }
+    
+    func openDetail(post: Post) {
+        router.openDetail(post: post)
+    }
 }

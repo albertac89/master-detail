@@ -9,4 +9,5 @@ import Foundation
 
 protocol MainPresenterProtocol {
     func getPosts()
+    func openDetail(post: Post)
 }

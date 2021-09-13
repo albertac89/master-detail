@@ -34,6 +34,7 @@
 		608BFD4B26EFC4A800DD62F2 /* MainViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */; };
 		608BFD5126EFCA9300DD62F2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */; };
 		608BFD5226EFCA9300DD62F2 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */; };
+		608BFD5726EFD60800DD62F2 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerProtocol.swift; sourceTree = "<group>"; };
 		608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +188,8 @@
 		608BFD0926EFB81100DD62F2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				608BFD0226EFB80B00DD62F2 /* DetailViewController.swift */,
-				608BFD0326EFB80B00DD62F2 /* DetailViewController.xib */,
+				608BFD5B26EFD63400DD62F2 /* View */,
+				608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -247,6 +249,15 @@
 				608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		608BFD5B26EFD63400DD62F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD0226EFB80B00DD62F2 /* DetailViewController.swift */,
+				608BFD0326EFB80B00DD62F2 /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +406,7 @@
 				608BFD3C26EFC3DF00DD62F2 /* MainInteractorProtocol.swift in Sources */,
 				608BFD4626EFC43800DD62F2 /* MainRouterProtocol.swift in Sources */,
 				608BFD2826EFC35C00DD62F2 /* MainPresenter.swift in Sources */,
+				608BFD5726EFD60800DD62F2 /* DetailBuilder.swift in Sources */,
 				608BFCE926EFB38500DD62F2 /* MainViewController.swift in Sources */,
 				608BFD0426EFB80B00DD62F2 /* DetailViewController.swift in Sources */,
 				608BFD2326EFC34B00DD62F2 /* MainPresenterProtocol.swift in Sources */,

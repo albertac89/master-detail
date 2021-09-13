@@ -13,5 +13,12 @@ class MainRouter {
 }
 
 extension MainRouter: MainRouterProtocol {
-    
+    func openDetail(post: Post) {
+        guard let vc = view else {
+            assertionFailure("we need the view for show")
+            return
+        }
+        let detailVc = DetailBuilder.build(post: post)
+        vc.navigationController?.pushViewController(detailVc, animated: true)
+    }
 }

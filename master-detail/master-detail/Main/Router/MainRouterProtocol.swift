@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainRouterProtocol {
-
+    func openDetail(post: Post)
 }
