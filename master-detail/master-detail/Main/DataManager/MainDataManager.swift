@@ -13,6 +13,7 @@ class MainDataManager {
 
 extension MainDataManager: MainDataManagerProtocol {
     func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        //TODO check for internet connection and use CoreData to save/load the posts
         apiClient.fetch(with: .get, path: "/posts", body: nil) { (result: Result<[Post], Error>) in
             completion(result)
         }

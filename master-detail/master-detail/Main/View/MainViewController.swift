@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
