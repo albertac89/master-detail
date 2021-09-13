@@ -16,5 +16,9 @@ class MainInteractor {
 }
 
 extension MainInteractor: MainInteractorProtocol {
-    
+    func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        dataManager.getPosts { (result: Result<[Post], Error>) in
+            completion(result)
+        }
+    }
 }

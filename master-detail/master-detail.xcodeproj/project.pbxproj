@@ -32,6 +32,8 @@
 		608BFD4126EFC42800DD62F2 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4026EFC42800DD62F2 /* MainRouter.swift */; };
 		608BFD4626EFC43800DD62F2 /* MainRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */; };
 		608BFD4B26EFC4A800DD62F2 /* MainViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */; };
+		608BFD5126EFCA9300DD62F2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */; };
+		608BFD5226EFCA9300DD62F2 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		608BFD4026EFC42800DD62F2 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterProtocol.swift; sourceTree = "<group>"; };
 		608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerProtocol.swift; sourceTree = "<group>"; };
+		608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 				608BFCE726EFB38500DD62F2 /* MainViewController.swift */,
 				608BFCE826EFB38500DD62F2 /* MainViewController.xib */,
 				608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */,
+				608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */,
+				608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				608BFCBD26EFB02C00DD62F2 /* LaunchScreen.storyboard in Resources */,
+				608BFD5226EFCA9300DD62F2 /* PostTableViewCell.xib in Resources */,
 				608BFCBA26EFB02C00DD62F2 /* Assets.xcassets in Resources */,
 				608BFCEA26EFB38500DD62F2 /* MainViewController.xib in Resources */,
 				608BFD0526EFB80B00DD62F2 /* DetailViewController.xib in Resources */,
@@ -381,6 +388,7 @@
 				608BFD0F26EFB86000DD62F2 /* APIClient.swift in Sources */,
 				608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */,
 				608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */,
+				608BFD5126EFCA9300DD62F2 /* PostTableViewCell.swift in Sources */,
 				608BFD3226EFC39900DD62F2 /* MainDataManagerProtocol.swift in Sources */,
 				608BFD1426EFC16400DD62F2 /* Models.swift in Sources */,
 				608BFD3726EFC3C100DD62F2 /* MainInteractor.swift in Sources */,

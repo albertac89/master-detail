@@ -19,5 +19,14 @@ class MainPresenter {
 }
 
 extension MainPresenter: MainPresenterProtocol {
-    
+    func getPosts() {
+        interactor.getPosts { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.view?.setupData(posts: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

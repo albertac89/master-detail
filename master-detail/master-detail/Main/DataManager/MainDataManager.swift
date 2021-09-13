@@ -12,5 +12,9 @@ class MainDataManager {
 }
 
 extension MainDataManager: MainDataManagerProtocol {
-    
+    func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+        apiClient.fetch(with: .get, path: "/posts", body: nil) { (result: Result<[Post], Error>) in
+            completion(result)
+        }
+    }
 }

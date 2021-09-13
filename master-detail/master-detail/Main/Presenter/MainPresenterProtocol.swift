@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainPresenterProtocol {
-
+    func getPosts()
 }

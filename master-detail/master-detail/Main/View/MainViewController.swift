@@ -8,7 +8,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     var presenter: MainPresenterProtocol
+    private var data: [Post] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     init(presenter: MainPresenterProtocol) {
         self.presenter = presenter
@@ -22,20 +28,52 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "JSONPlaceholder"
-        
-        let apiClient = APIClient()
-        
-        apiClient.fetch(with: .get, path: "/posts", body: nil) { (result: Result<[Posts], Error>) in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        setupTableView()
+        presenter.getPosts()
+    }
+    
+    private func setupTableView() {
+        tableView.separatorStyle = .singleLine
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(UINib(nibName: PostTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: PostTableViewCell.identifier)
     }
 }
 
 extension MainViewController: MainViewControllerProtocol {
+    func setupData(posts: [Post]) {
+        DispatchQueue.main.async {
+            self.data = posts
+        }
+    }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = data[indexPath.row]
+        let cell: PostTableViewCell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        cell.configure(post: post)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let post = data[indexPath.row]
+        //TODO open detail
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let selectionColor = UIView() as UIView
+        selectionColor.backgroundColor = UIColor.systemPink
+        cell.selectedBackgroundView = selectionColor
+    }
 }

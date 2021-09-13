@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MainDataManagerProtocol {
-    
+    func getPosts(completion: @escaping (Result<[Post], Error>) -> Void)
 }
