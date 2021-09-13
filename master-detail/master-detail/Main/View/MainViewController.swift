@@ -8,7 +8,17 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    var presenter: MainPresenterProtocol
+    
+    init(presenter: MainPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "JSONPlaceholder"
@@ -24,4 +34,8 @@ class MainViewController: UIViewController {
             }
         }
     }
+}
+
+extension MainViewController: MainViewControllerProtocol {
+    
 }

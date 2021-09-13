@@ -22,6 +22,16 @@
 		608BFD0526EFB80B00DD62F2 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608BFD0326EFB80B00DD62F2 /* DetailViewController.xib */; };
 		608BFD0F26EFB86000DD62F2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD0E26EFB86000DD62F2 /* APIClient.swift */; };
 		608BFD1426EFC16400DD62F2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD1326EFC16400DD62F2 /* Models.swift */; };
+		608BFD1E26EFC31400DD62F2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD1D26EFC31400DD62F2 /* Builder.swift */; };
+		608BFD2326EFC34B00DD62F2 /* MainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD2226EFC34B00DD62F2 /* MainPresenterProtocol.swift */; };
+		608BFD2826EFC35C00DD62F2 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD2726EFC35C00DD62F2 /* MainPresenter.swift */; };
+		608BFD2D26EFC39100DD62F2 /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD2C26EFC39100DD62F2 /* MainDataManager.swift */; };
+		608BFD3226EFC39900DD62F2 /* MainDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD3126EFC39900DD62F2 /* MainDataManagerProtocol.swift */; };
+		608BFD3726EFC3C100DD62F2 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD3626EFC3C100DD62F2 /* MainInteractor.swift */; };
+		608BFD3C26EFC3DF00DD62F2 /* MainInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD3B26EFC3DF00DD62F2 /* MainInteractorProtocol.swift */; };
+		608BFD4126EFC42800DD62F2 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4026EFC42800DD62F2 /* MainRouter.swift */; };
+		608BFD4626EFC43800DD62F2 /* MainRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */; };
+		608BFD4B26EFC4A800DD62F2 /* MainViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,16 @@
 		608BFD0326EFB80B00DD62F2 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		608BFD0E26EFB86000DD62F2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		608BFD1326EFC16400DD62F2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		608BFD1D26EFC31400DD62F2 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		608BFD2226EFC34B00DD62F2 /* MainPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterProtocol.swift; sourceTree = "<group>"; };
+		608BFD2726EFC35C00DD62F2 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		608BFD2C26EFC39100DD62F2 /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
+		608BFD3126EFC39900DD62F2 /* MainDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManagerProtocol.swift; sourceTree = "<group>"; };
+		608BFD3626EFC3C100DD62F2 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		608BFD3B26EFC3DF00DD62F2 /* MainInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorProtocol.swift; sourceTree = "<group>"; };
+		608BFD4026EFC42800DD62F2 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterProtocol.swift; sourceTree = "<group>"; };
+		608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +169,12 @@
 		608BFCE626EFB36900DD62F2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				608BFCE726EFB38500DD62F2 /* MainViewController.swift */,
-				608BFCE826EFB38500DD62F2 /* MainViewController.xib */,
+				608BFD1C26EFC30600DD62F2 /* Router */,
+				608BFD1B26EFC2FE00DD62F2 /* Interactor */,
+				608BFD1A26EFC2F300DD62F2 /* DataManager */,
+				608BFD1926EFC2E800DD62F2 /* Presenter */,
+				608BFD1826EFC2D900DD62F2 /* View */,
+				608BFD1D26EFC31400DD62F2 /* Builder.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -171,6 +195,52 @@
 				608BFD1326EFC16400DD62F2 /* Models.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		608BFD1826EFC2D900DD62F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				608BFCE726EFB38500DD62F2 /* MainViewController.swift */,
+				608BFCE826EFB38500DD62F2 /* MainViewController.xib */,
+				608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		608BFD1926EFC2E800DD62F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD2226EFC34B00DD62F2 /* MainPresenterProtocol.swift */,
+				608BFD2726EFC35C00DD62F2 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		608BFD1A26EFC2F300DD62F2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD2C26EFC39100DD62F2 /* MainDataManager.swift */,
+				608BFD3126EFC39900DD62F2 /* MainDataManagerProtocol.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		608BFD1B26EFC2FE00DD62F2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD3626EFC3C100DD62F2 /* MainInteractor.swift */,
+				608BFD3B26EFC3DF00DD62F2 /* MainInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		608BFD1C26EFC30600DD62F2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD4026EFC42800DD62F2 /* MainRouter.swift */,
+				608BFD4526EFC43800DD62F2 /* MainRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,12 +377,22 @@
 				608BFCB826EFB02B00DD62F2 /* master_detail.xcdatamodeld in Sources */,
 				608BFCF826EFB4C400DD62F2 /* NavigationController.swift in Sources */,
 				608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */,
+				608BFD4126EFC42800DD62F2 /* MainRouter.swift in Sources */,
 				608BFD0F26EFB86000DD62F2 /* APIClient.swift in Sources */,
 				608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */,
 				608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */,
+				608BFD3226EFC39900DD62F2 /* MainDataManagerProtocol.swift in Sources */,
 				608BFD1426EFC16400DD62F2 /* Models.swift in Sources */,
+				608BFD3726EFC3C100DD62F2 /* MainInteractor.swift in Sources */,
+				608BFD3C26EFC3DF00DD62F2 /* MainInteractorProtocol.swift in Sources */,
+				608BFD4626EFC43800DD62F2 /* MainRouterProtocol.swift in Sources */,
+				608BFD2826EFC35C00DD62F2 /* MainPresenter.swift in Sources */,
 				608BFCE926EFB38500DD62F2 /* MainViewController.swift in Sources */,
 				608BFD0426EFB80B00DD62F2 /* DetailViewController.swift in Sources */,
+				608BFD2326EFC34B00DD62F2 /* MainPresenterProtocol.swift in Sources */,
+				608BFD1E26EFC31400DD62F2 /* Builder.swift in Sources */,
+				608BFD2D26EFC39100DD62F2 /* MainDataManager.swift in Sources */,
+				608BFD4B26EFC4A800DD62F2 /* MainViewControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
