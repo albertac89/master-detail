@@ -20,7 +20,9 @@ class MainPresenter {
 
 extension MainPresenter: MainPresenterProtocol {
     func getPosts() {
+        view?.startActivityIndicator()
         interactor.getPosts { [weak self] result in
+            self?.view?.stopActivityIndicator()
             switch result {
             case .success(let data):
                 self?.view?.setupData(posts: data)

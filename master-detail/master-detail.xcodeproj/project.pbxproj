@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601F35D026F1047D00725990 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35CE26F1047D00725990 /* PostDetailTableViewCell.swift */; };
+		601F35D126F1047D00725990 /* PostDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601F35CF26F1047D00725990 /* PostDetailTableViewCell.xib */; };
+		601F35D926F10A6500725990 /* ActivityIndicatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35D826F10A6500725990 /* ActivityIndicatorScreen.swift */; };
+		601F35E126F10BAE00725990 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35DF26F10BAE00725990 /* CommentTableViewCell.swift */; };
+		601F35E226F10BAE00725990 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601F35E026F10BAE00725990 /* CommentTableViewCell.xib */; };
 		608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */; };
 		608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */; };
 		608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCB126EFB02B00DD62F2 /* ViewController.swift */; };
@@ -35,6 +40,13 @@
 		608BFD5126EFCA9300DD62F2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */; };
 		608BFD5226EFCA9300DD62F2 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */; };
 		608BFD5726EFD60800DD62F2 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */; };
+		608BFD6326F0842E00DD62F2 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD6226F0842E00DD62F2 /* DetailPresenter.swift */; };
+		608BFD6B26F0843A00DD62F2 /* DetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD6A26F0843A00DD62F2 /* DetailPresenterProtocol.swift */; };
+		608BFD7026F0846D00DD62F2 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD6F26F0846D00DD62F2 /* DetailInteractor.swift */; };
+		608BFD7526F0849A00DD62F2 /* DetailInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD7426F0849A00DD62F2 /* DetailInteractorProtocol.swift */; };
+		608BFD7A26F084B200DD62F2 /* DetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD7926F084B200DD62F2 /* DetailDataManagerProtocol.swift */; };
+		608BFD7F26F084C900DD62F2 /* DetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD7E26F084C900DD62F2 /* DetailDataManager.swift */; };
+		608BFD8426F084F900DD62F2 /* DetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFD8326F084F900DD62F2 /* DetailViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601F35CE26F1047D00725990 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
+		601F35CF26F1047D00725990 /* PostDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailTableViewCell.xib; sourceTree = "<group>"; };
+		601F35D826F10A6500725990 /* ActivityIndicatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorScreen.swift; sourceTree = "<group>"; };
+		601F35DF26F10BAE00725990 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		601F35E026F10BAE00725990 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		608BFCAA26EFB02B00DD62F2 /* master-detail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "master-detail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +106,13 @@
 		608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		608BFD6226F0842E00DD62F2 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		608BFD6A26F0843A00DD62F2 /* DetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		608BFD6F26F0846D00DD62F2 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		608BFD7426F0849A00DD62F2 /* DetailInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorProtocol.swift; sourceTree = "<group>"; };
+		608BFD7926F084B200DD62F2 /* DetailDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataManagerProtocol.swift; sourceTree = "<group>"; };
+		608BFD7E26F084C900DD62F2 /* DetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataManager.swift; sourceTree = "<group>"; };
+		608BFD8326F084F900DD62F2 /* DetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +140,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601F35DD26F10B8300725990 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				601F35CE26F1047D00725990 /* PostDetailTableViewCell.swift */,
+				601F35CF26F1047D00725990 /* PostDetailTableViewCell.xib */,
+				601F35DF26F10BAE00725990 /* CommentTableViewCell.swift */,
+				601F35E026F10BAE00725990 /* CommentTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		601F35DE26F10B9000725990 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */,
+				608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		608BFCA126EFB02A00DD62F2 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +232,9 @@
 		608BFD0926EFB81100DD62F2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				608BFD6126F0841800DD62F2 /* DataManager */,
+				608BFD6026F0841100DD62F2 /* Interactor */,
+				608BFD5F26F0840A00DD62F2 /* Presenter */,
 				608BFD5B26EFD63400DD62F2 /* View */,
 				608BFD5626EFD60800DD62F2 /* DetailBuilder.swift */,
 			);
@@ -199,6 +246,7 @@
 			children = (
 				608BFD0E26EFB86000DD62F2 /* APIClient.swift */,
 				608BFD1326EFC16400DD62F2 /* Models.swift */,
+				601F35D826F10A6500725990 /* ActivityIndicatorScreen.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -206,11 +254,10 @@
 		608BFD1826EFC2D900DD62F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				601F35DE26F10B9000725990 /* Cells */,
 				608BFCE726EFB38500DD62F2 /* MainViewController.swift */,
 				608BFCE826EFB38500DD62F2 /* MainViewController.xib */,
 				608BFD4A26EFC4A800DD62F2 /* MainViewControllerProtocol.swift */,
-				608BFD4F26EFCA9300DD62F2 /* PostTableViewCell.swift */,
-				608BFD5026EFCA9300DD62F2 /* PostTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,10 +301,39 @@
 		608BFD5B26EFD63400DD62F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				601F35DD26F10B8300725990 /* Cells */,
 				608BFD0226EFB80B00DD62F2 /* DetailViewController.swift */,
 				608BFD0326EFB80B00DD62F2 /* DetailViewController.xib */,
+				608BFD8326F084F900DD62F2 /* DetailViewControllerProtocol.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		608BFD5F26F0840A00DD62F2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD6226F0842E00DD62F2 /* DetailPresenter.swift */,
+				608BFD6A26F0843A00DD62F2 /* DetailPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		608BFD6026F0841100DD62F2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD6F26F0846D00DD62F2 /* DetailInteractor.swift */,
+				608BFD7426F0849A00DD62F2 /* DetailInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		608BFD6126F0841800DD62F2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				608BFD7926F084B200DD62F2 /* DetailDataManagerProtocol.swift */,
+				608BFD7E26F084C900DD62F2 /* DetailDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +439,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601F35D126F1047D00725990 /* PostDetailTableViewCell.xib in Resources */,
 				608BFCBD26EFB02C00DD62F2 /* LaunchScreen.storyboard in Resources */,
 				608BFD5226EFCA9300DD62F2 /* PostTableViewCell.xib in Resources */,
 				608BFCBA26EFB02C00DD62F2 /* Assets.xcassets in Resources */,
+				601F35E226F10BAE00725990 /* CommentTableViewCell.xib in Resources */,
 				608BFCEA26EFB38500DD62F2 /* MainViewController.xib in Resources */,
 				608BFD0526EFB80B00DD62F2 /* DetailViewController.xib in Resources */,
 			);
@@ -397,18 +475,28 @@
 				608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */,
 				608BFD4126EFC42800DD62F2 /* MainRouter.swift in Sources */,
 				608BFD0F26EFB86000DD62F2 /* APIClient.swift in Sources */,
+				608BFD8426F084F900DD62F2 /* DetailViewControllerProtocol.swift in Sources */,
 				608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */,
 				608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */,
 				608BFD5126EFCA9300DD62F2 /* PostTableViewCell.swift in Sources */,
+				608BFD7A26F084B200DD62F2 /* DetailDataManagerProtocol.swift in Sources */,
+				601F35D026F1047D00725990 /* PostDetailTableViewCell.swift in Sources */,
 				608BFD3226EFC39900DD62F2 /* MainDataManagerProtocol.swift in Sources */,
 				608BFD1426EFC16400DD62F2 /* Models.swift in Sources */,
 				608BFD3726EFC3C100DD62F2 /* MainInteractor.swift in Sources */,
 				608BFD3C26EFC3DF00DD62F2 /* MainInteractorProtocol.swift in Sources */,
 				608BFD4626EFC43800DD62F2 /* MainRouterProtocol.swift in Sources */,
+				608BFD6B26F0843A00DD62F2 /* DetailPresenterProtocol.swift in Sources */,
 				608BFD2826EFC35C00DD62F2 /* MainPresenter.swift in Sources */,
+				608BFD7026F0846D00DD62F2 /* DetailInteractor.swift in Sources */,
 				608BFD5726EFD60800DD62F2 /* DetailBuilder.swift in Sources */,
+				601F35D926F10A6500725990 /* ActivityIndicatorScreen.swift in Sources */,
+				601F35E126F10BAE00725990 /* CommentTableViewCell.swift in Sources */,
+				608BFD7526F0849A00DD62F2 /* DetailInteractorProtocol.swift in Sources */,
+				608BFD6326F0842E00DD62F2 /* DetailPresenter.swift in Sources */,
 				608BFCE926EFB38500DD62F2 /* MainViewController.swift in Sources */,
 				608BFD0426EFB80B00DD62F2 /* DetailViewController.swift in Sources */,
+				608BFD7F26F084C900DD62F2 /* DetailDataManager.swift in Sources */,
 				608BFD2326EFC34B00DD62F2 /* MainPresenterProtocol.swift in Sources */,
 				608BFD1E26EFC31400DD62F2 /* Builder.swift in Sources */,
 				608BFD2D26EFC39100DD62F2 /* MainDataManager.swift in Sources */,

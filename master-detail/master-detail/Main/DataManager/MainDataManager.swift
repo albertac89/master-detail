@@ -9,10 +9,11 @@ import Foundation
 import CoreData
 
 class MainDataManager {
-    var apiClient = APIClient()
+    var apiClient: APIClient
     var managedContext: NSManagedObjectContext
     
-    init(managedContext: NSManagedObjectContext) {
+    init(apiClient: APIClient, managedContext: NSManagedObjectContext) {
+        self.apiClient = apiClient
         self.managedContext = managedContext
     }
 }
@@ -64,7 +65,7 @@ extension MainDataManager: MainDataManagerProtocol {
                 Post(userId: $0.value(forKeyPath: "userId") as? Int ?? 0,
                      id: $0.value(forKeyPath: "id") as? Int ?? 0,
                      title: $0.value(forKeyPath: "title") as? String ?? "",
-                    body: $0.value(forKeyPath: "body") as? String ?? "")
+                     body: $0.value(forKeyPath: "body") as? String ?? "")
             }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")

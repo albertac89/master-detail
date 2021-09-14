@@ -8,7 +8,7 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-    static let identifier = "PostTableViewCell"
+    static let identifier = String(describing: PostTableViewCell.self)
     @IBOutlet weak var postView: UIView!
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postSummaryLabel: UILabel!
@@ -24,6 +24,5 @@ class PostTableViewCell: UITableViewCell {
         postSummaryLabel.font = .systemFont(ofSize: 15)
         postView.layer.borderWidth = 2
         postView.layer.borderColor = UIColor.systemPink.cgColor
-        postView.layer.cornerRadius = 10
     }
 }

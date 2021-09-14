@@ -9,4 +9,6 @@ import Foundation
 
 protocol MainViewControllerProtocol: class {
     func setupData(posts: [Post])
+    func startActivityIndicator()
+    func stopActivityIndicator()
 }

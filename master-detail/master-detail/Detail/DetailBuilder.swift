@@ -10,6 +10,12 @@ import UIKit
 
 class DetailBuilder {
     static func build(post: Post) -> UIViewController {
-        return DetailViewController()
+        let apiClient = APIClient()
+        let dataManager = DetailDataManager(apiClient: apiClient)
+        let interactor = DetailInteractor(post: post, dataManager: dataManager)
+        let presenter = DetailPresenter(interactor: interactor)
+        let view = DetailViewController(presenter: presenter)
+        presenter.view = view
+        return view
     }
 }
