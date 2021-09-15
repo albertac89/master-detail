@@ -11,11 +11,12 @@ class MainPresenter {
     weak var view: MainViewControllerProtocol?
     var interactor: MainInteractorProtocol
     var router: MainRouterProtocol
-    var network = NetworkMonitor.shared
+    var networkMonitor: NetworkMonitor
     
-    init(interactor: MainInteractorProtocol, router: MainRouterProtocol) {
+    init(interactor: MainInteractorProtocol, router: MainRouterProtocol, networkMonitor: NetworkMonitor) {
         self.interactor = interactor
         self.router = router
+        self.networkMonitor = networkMonitor
     }
 }
 
@@ -34,7 +35,7 @@ extension MainPresenter: MainPresenterProtocol {
     }
     
     func openDetail(post: Post) {
-        if network.isNetworkAvailable ?? false {
+        if networkMonitor.isNetworkAvailable ?? false {
             router.openDetail(post: post)
         } else {
             self.view?.showMessage(title: "Error", message: "No internet connection")

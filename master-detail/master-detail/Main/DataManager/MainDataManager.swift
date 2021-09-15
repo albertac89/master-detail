@@ -11,17 +11,18 @@ import CoreData
 class MainDataManager {
     var apiClient: APIClient
     var managedContext: NSManagedObjectContext
-    var network = NetworkMonitor.shared
+    var networkMonitor: NetworkMonitor
     
-    init(apiClient: APIClient, managedContext: NSManagedObjectContext) {
+    init(apiClient: APIClient, managedContext: NSManagedObjectContext, networkMonitor: NetworkMonitor) {
         self.apiClient = apiClient
         self.managedContext = managedContext
+        self.networkMonitor = networkMonitor
     }
 }
 
 extension MainDataManager: MainDataManagerProtocol {
     func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
-        if network.isNetworkAvailable ?? false {
+        if networkMonitor.isNetworkAvailable ?? false {
             apiClient.fetch(with: .get, path: "/posts", body: nil) { (result: Result<[Post], Error>) in
                 if case .success(let posts) = result {
                     self.savePostsToCoreData(posts: posts)

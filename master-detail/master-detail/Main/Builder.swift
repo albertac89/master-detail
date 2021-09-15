@@ -13,10 +13,11 @@ class MainBuilder {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         let managedContext = appDelegate.persistentContainer.viewContext
         let apiClient = APIClient()
-        let dataManager = MainDataManager(apiClient: apiClient, managedContext: managedContext)
+        let networkMonitor = NetworkMonitor.shared
+        let dataManager = MainDataManager(apiClient: apiClient, managedContext: managedContext, networkMonitor: networkMonitor)
         let interactor = MainInteractor(dataManager: dataManager)
         let router = MainRouter()
-        let presenter = MainPresenter(interactor: interactor, router: router)
+        let presenter = MainPresenter(interactor: interactor, router: router, networkMonitor: networkMonitor)
         let view = MainViewController(presenter: presenter)
         presenter.view = view
         router.view = view

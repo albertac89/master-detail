@@ -17,13 +17,16 @@
 		601F35F226F264EC00725990 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35F126F264EB00725990 /* UITableView+extension.swift */; };
 		601F35F726F2653400725990 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35F626F2653400725990 /* UIViewController+extension.swift */; };
 		601F35FC26F266A400725990 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35FB26F266A400725990 /* NetworkMonitor.swift */; };
+		601F360C26F2717100725990 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F360B26F2717100725990 /* MainPresenterTests.swift */; };
+		601F361126F2722C00725990 /* MainRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F361026F2722C00725990 /* MainRouterMock.swift */; };
+		601F361626F2729D00725990 /* MainInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F361526F2729D00725990 /* MainInteractorMock.swift */; };
+		601F361B26F2739B00725990 /* MainViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F361A26F2739B00725990 /* MainViewControllerMock.swift */; };
 		608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */; };
 		608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */; };
 		608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCB126EFB02B00DD62F2 /* ViewController.swift */; };
 		608BFCB826EFB02B00DD62F2 /* master_detail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCB626EFB02B00DD62F2 /* master_detail.xcdatamodeld */; };
 		608BFCBA26EFB02C00DD62F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608BFCB926EFB02C00DD62F2 /* Assets.xcassets */; };
 		608BFCBD26EFB02C00DD62F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608BFCBB26EFB02C00DD62F2 /* LaunchScreen.storyboard */; };
-		608BFCC826EFB02D00DD62F2 /* master_detailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCC726EFB02D00DD62F2 /* master_detailTests.swift */; };
 		608BFCD326EFB02D00DD62F2 /* master_detailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCD226EFB02D00DD62F2 /* master_detailUITests.swift */; };
 		608BFCE926EFB38500DD62F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCE726EFB38500DD62F2 /* MainViewController.swift */; };
 		608BFCEA26EFB38500DD62F2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608BFCE826EFB38500DD62F2 /* MainViewController.xib */; };
@@ -82,6 +85,10 @@
 		601F35F126F264EB00725990 /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		601F35F626F2653400725990 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		601F35FB26F266A400725990 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		601F360B26F2717100725990 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		601F361026F2722C00725990 /* MainRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterMock.swift; sourceTree = "<group>"; };
+		601F361526F2729D00725990 /* MainInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorMock.swift; sourceTree = "<group>"; };
+		601F361A26F2739B00725990 /* MainViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerMock.swift; sourceTree = "<group>"; };
 		608BFCAA26EFB02B00DD62F2 /* master-detail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "master-detail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +98,6 @@
 		608BFCBC26EFB02C00DD62F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		608BFCBE26EFB02C00DD62F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608BFCC326EFB02D00DD62F2 /* master-detailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "master-detailTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		608BFCC726EFB02D00DD62F2 /* master_detailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = master_detailTests.swift; sourceTree = "<group>"; };
 		608BFCC926EFB02D00DD62F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608BFCCE26EFB02D00DD62F2 /* master-detailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "master-detailUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		608BFCD226EFB02D00DD62F2 /* master_detailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = master_detailUITests.swift; sourceTree = "<group>"; };
@@ -181,6 +187,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		601F360626F26FF700725990 /* MainTests */ = {
+			isa = PBXGroup;
+			children = (
+				601F360B26F2717100725990 /* MainPresenterTests.swift */,
+				601F361026F2722C00725990 /* MainRouterMock.swift */,
+				601F361526F2729D00725990 /* MainInteractorMock.swift */,
+				601F361A26F2739B00725990 /* MainViewControllerMock.swift */,
+			);
+			path = MainTests;
+			sourceTree = "<group>";
+		};
+		601F360726F2700900725990 /* DetailTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailTests;
+			sourceTree = "<group>";
+		};
 		608BFCA126EFB02A00DD62F2 = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +247,8 @@
 		608BFCC626EFB02D00DD62F2 /* master-detailTests */ = {
 			isa = PBXGroup;
 			children = (
-				608BFCC726EFB02D00DD62F2 /* master_detailTests.swift */,
+				601F360726F2700900725990 /* DetailTests */,
+				601F360626F26FF700725990 /* MainTests */,
 				608BFCC926EFB02D00DD62F2 /* Info.plist */,
 			);
 			path = "master-detailTests";
@@ -429,6 +454,7 @@
 					};
 					608BFCC226EFB02D00DD62F2 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 608BFCA926EFB02B00DD62F2;
 					};
 					608BFCCD26EFB02D00DD62F2 = {
@@ -536,7 +562,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				608BFCC826EFB02D00DD62F2 /* master_detailTests.swift in Sources */,
+				601F360C26F2717100725990 /* MainPresenterTests.swift in Sources */,
+				601F361B26F2739B00725990 /* MainViewControllerMock.swift in Sources */,
+				601F361126F2722C00725990 /* MainRouterMock.swift in Sources */,
+				601F361626F2729D00725990 /* MainInteractorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +761,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "master-detailTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -742,6 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.albertaige.master-detailTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/master-detail.app/master-detail";
@@ -753,6 +784,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "master-detailTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
