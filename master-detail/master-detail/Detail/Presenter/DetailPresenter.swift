@@ -30,4 +30,18 @@ extension DetailPresenter: DetailPresenterProtocol {
             }
         }
     }
+    
+    func addComment(postId: Int, id: Int, body: String) {
+        view?.startActivityIndicator()
+        let comment = Comment(postId: postId, id: id, name: "", email: "unknown@gmail.com", body: body)
+        interactor.addCommentForPost(comment: comment) { [weak self] (result: Result<Comment, Error>) in
+            self?.view?.stopActivityIndicator()
+            switch result {
+            case .success(let comment):
+                self?.view?.appendNewComment(comment: comment)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

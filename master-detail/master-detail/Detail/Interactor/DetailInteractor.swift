@@ -39,4 +39,9 @@ extension DetailInteractor: DetailInteractorProtocol {
             }
         }
     }
+    
+    func addCommentForPost(comment: Comment, completion: @escaping (Result<Comment, Error>) -> Void) {
+        // jsonplaceholder API don't allow to PUT a new comment
+        completion(.success(comment))
+    }
 }

@@ -9,7 +9,6 @@ import UIKit
 
 class CommentTableViewCell: UITableViewCell {
     static let identifier = String(describing: CommentTableViewCell.self)
-    
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!

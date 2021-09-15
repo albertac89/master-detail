@@ -9,4 +9,5 @@ import Foundation
 
 protocol DetailPresenterProtocol {
     func getCommentsDetails()
+    func addComment(postId: Int, id: Int, body: String)
 }

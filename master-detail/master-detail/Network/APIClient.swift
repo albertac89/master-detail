@@ -34,8 +34,9 @@ class APIClient {
     }
     
     func fetch<T: Codable>(with httpMethod: HTTPMethod, path: String, body: Data? = nil, params: [String: Any] = [:], completion: @escaping (Result<T, Error>) -> Void) {
-        var requestParams = "?"
+        var requestParams = ""
         for (index, item) in params.enumerated() {
+            if index == 0 { requestParams.append("?")}
             requestParams.append("\(item.key)=\(item.value)")
             if index > params.count - 1 {
                 requestParams.append("&")
