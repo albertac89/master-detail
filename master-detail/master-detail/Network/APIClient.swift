@@ -6,32 +6,9 @@
 //
 
 import Foundation
-import Network
 
 class APIClient {
     private let BASE_URL = "https://jsonplaceholder.typicode.com"
-    let monitor = NWPathMonitor()
-    let queue = DispatchQueue(label: "InternetConnectionMonitor")
-    var isNetworkAvailable = true
-    
-    init() {
-        initMonitor()
-    }
-    
-    deinit {
-        monitor.cancel()
-    }
-    
-    private func initMonitor() {
-        monitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                self.isNetworkAvailable = true
-           } else {
-                self.isNetworkAvailable = false
-           }
-        }
-        monitor.start(queue: queue)
-    }
     
     func fetch<T: Codable>(with httpMethod: HTTPMethod, path: String, body: Data? = nil, params: [String: Any] = [:], completion: @escaping (Result<T, Error>) -> Void) {
         var requestParams = ""

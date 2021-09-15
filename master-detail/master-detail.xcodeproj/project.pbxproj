@@ -16,6 +16,7 @@
 		601F35EC26F1E97900725990 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601F35EA26F1E97900725990 /* MessageTableViewCell.xib */; };
 		601F35F226F264EC00725990 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35F126F264EB00725990 /* UITableView+extension.swift */; };
 		601F35F726F2653400725990 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35F626F2653400725990 /* UIViewController+extension.swift */; };
+		601F35FC26F266A400725990 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F35FB26F266A400725990 /* NetworkMonitor.swift */; };
 		608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */; };
 		608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */; };
 		608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BFCB126EFB02B00DD62F2 /* ViewController.swift */; };
@@ -80,6 +81,7 @@
 		601F35EA26F1E97900725990 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		601F35F126F264EB00725990 /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		601F35F626F2653400725990 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		601F35FB26F266A400725990 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		608BFCAA26EFB02B00DD62F2 /* master-detail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "master-detail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		608BFCAD26EFB02B00DD62F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608BFCAF26EFB02B00DD62F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				608BFD0E26EFB86000DD62F2 /* APIClient.swift */,
 				608BFD1326EFC16400DD62F2 /* Models.swift */,
 				601F35D826F10A6500725990 /* ActivityIndicatorScreen.swift */,
+				601F35FB26F266A400725990 /* NetworkMonitor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				608BFCB226EFB02B00DD62F2 /* ViewController.swift in Sources */,
 				608BFD4126EFC42800DD62F2 /* MainRouter.swift in Sources */,
 				608BFD0F26EFB86000DD62F2 /* APIClient.swift in Sources */,
+				601F35FC26F266A400725990 /* NetworkMonitor.swift in Sources */,
 				608BFD8426F084F900DD62F2 /* DetailViewControllerProtocol.swift in Sources */,
 				608BFCAE26EFB02B00DD62F2 /* AppDelegate.swift in Sources */,
 				608BFCB026EFB02B00DD62F2 /* SceneDelegate.swift in Sources */,

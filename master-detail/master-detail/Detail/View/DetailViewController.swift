@@ -92,6 +92,14 @@ extension DetailViewController: DetailViewControllerProtocol {
         self.data.insert(.comment(comment), at: newCommentIndex)
         self.tableView.scrollToBottom()
     }
+    
+    func showMessage(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {

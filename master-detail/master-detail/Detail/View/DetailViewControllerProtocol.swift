@@ -10,6 +10,7 @@ import Foundation
 protocol DetailViewControllerProtocol: class {
     func setupData(sections: [PostDetailSections])
     func appendNewComment(comment: Comment)
+    func showMessage(title: String, message: String)
     func startActivityIndicator()
     func stopActivityIndicator()
 }

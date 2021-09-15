@@ -9,6 +9,7 @@ import Foundation
 
 protocol MainViewControllerProtocol: class {
     func setupData(posts: [Post])
+    func showMessage(title: String, message: String)
     func startActivityIndicator()
     func stopActivityIndicator()
 }

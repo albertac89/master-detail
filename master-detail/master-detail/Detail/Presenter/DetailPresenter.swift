@@ -26,7 +26,7 @@ extension DetailPresenter: DetailPresenterProtocol {
             case .success(let postDetailSections):
                 self?.view?.setupData(sections: postDetailSections)
             case .failure(let error):
-                print(error)
+                self?.view?.showMessage(title: "Error", message: error.localizedDescription)
             }
         }
     }
@@ -40,7 +40,7 @@ extension DetailPresenter: DetailPresenterProtocol {
             case .success(let comment):
                 self?.view?.appendNewComment(comment: comment)
             case .failure(let error):
-                print(error)
+                self?.view?.showMessage(title: "Error", message: error.localizedDescription)
             }
         }
     }
