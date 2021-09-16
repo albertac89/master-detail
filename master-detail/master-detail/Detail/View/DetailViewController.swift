@@ -27,18 +27,25 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Post"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
-            title: "", style: .plain, target: nil, action: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+        configureNavBar()
+        configureKeyboard()
         setupTableView()
         presenter.getCommentsDetails()
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func configureNavBar() {
+        navigationItem.title = "Post"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
+            title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    private func configureKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func setupTableView() {
@@ -114,6 +121,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             let cell: MessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: MessageTableViewCell.identifier, for: indexPath) as! MessageTableViewCell
             cell.configure { text in
                 self.addComment(text: text)
+            } endEditing: {
+                self.view.endEditing(true)
             }
             return cell
         }
