@@ -10,6 +10,7 @@ import Foundation
 class DetailInteractor {
     var dataManager: DetailDataManagerProtocol
     var post: Post
+    var comments: [Comment]?
     
     init(post: Post, dataManager: DetailDataManagerProtocol) {
         self.post = post
@@ -17,6 +18,7 @@ class DetailInteractor {
     }
     
     private func buildPostSectionsWith(comments: [Comment]) -> [PostDetailSections] {
+        self.comments = comments
         var postDetailSections = [PostDetailSections]()
         postDetailSections.append(.post(post))
         for comment in comments {
@@ -40,8 +42,12 @@ extension DetailInteractor: DetailInteractorProtocol {
         }
     }
     
-    func addCommentForPost(comment: Comment, completion: @escaping (Result<Comment, Error>) -> Void) {
+    func addCommentForPost(body: String, completion: @escaping (Result<[PostDetailSections], Error>) -> Void) {
         // jsonplaceholder API don't allow to PUT a new comment
-        completion(.success(comment))
+        guard var comments = self.comments, let lastId = self.comments?.last?.id else { return }
+        let comment = Comment(postId: post.id, id: lastId + 1, name: "unknown", email: "unknown@gmail.com", body: body)
+        comments.append(comment)
+        let postDetailSections = self.buildPostSectionsWith(comments: comments)
+        completion(.success(postDetailSections))
     }
 }

@@ -68,29 +68,16 @@ class DetailViewController: UIViewController {
     private func addComment(text: String?) {
         guard let comment = text, !comment.isEmpty else {
             return }
-        let lastCommentIndex = self.data.count - 2
-        let item = self.data[lastCommentIndex]
-        
-        
-        if case .comment(let lastComment) = item {
-            let postId = lastComment.postId
-            let newId = lastComment.id + 1
-            presenter.addComment(postId: postId, id: newId, body: comment)
-        }
+        presenter.addComment(body: comment)
     }
 }
 
 extension DetailViewController: DetailViewControllerProtocol {
-    func setupData(sections: [PostDetailSections]) {
+    func setupData(sections: [PostDetailSections], scrollBottom: Bool = false) {
         DispatchQueue.main.async {
             self.data = sections
+            if scrollBottom { self.tableView.scrollToBottom() }
         }
-    }
-    
-    func appendNewComment(comment: Comment) {
-        let newCommentIndex = self.data.count - 1
-        self.data.insert(.comment(comment), at: newCommentIndex)
-        self.tableView.scrollToBottom()
     }
     
     func showMessage(title: String, message: String) {

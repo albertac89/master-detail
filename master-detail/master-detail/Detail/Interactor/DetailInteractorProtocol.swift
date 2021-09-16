@@ -9,5 +9,5 @@ import Foundation
 
 protocol DetailInteractorProtocol {
     func getCommentsForPost(completion: @escaping (Result<[PostDetailSections], Error>) -> Void)
-    func addCommentForPost(comment: Comment, completion: @escaping (Result<Comment, Error>) -> Void)
+    func addCommentForPost(body: String, completion: @escaping (Result<[PostDetailSections], Error>) -> Void)
 }

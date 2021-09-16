@@ -27,3 +27,11 @@ enum PostDetailSections {
     case comment(Comment)
     case addComment
 }
+
+struct PostCoreDataModel {
+    static let entityName = "Posts"
+    static let userIdKey = "userId"
+    static let idKey = "id"
+    static let titleKey = "title"
+    static let bodyKey = "body"
+}

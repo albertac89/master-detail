@@ -42,12 +42,12 @@ extension MainDataManager: MainDataManagerProtocol {
         clearCoreDataPosts()
         
         for post in posts {
-            let entity = NSEntityDescription.entity(forEntityName: "Posts", in: managedContext)!
+            let entity = NSEntityDescription.entity(forEntityName: PostCoreDataModel.entityName, in: managedContext)!
             let postData = NSManagedObject(entity: entity, insertInto: managedContext)
-            postData.setValue(post.userId, forKeyPath: "userId")
-            postData.setValue(post.id, forKeyPath: "id")
-            postData.setValue(post.title, forKeyPath: "title")
-            postData.setValue(post.body, forKeyPath: "body")
+            postData.setValue(post.userId, forKeyPath: PostCoreDataModel.userIdKey)
+            postData.setValue(post.id, forKeyPath: PostCoreDataModel.idKey)
+            postData.setValue(post.title, forKeyPath: PostCoreDataModel.titleKey)
+            postData.setValue(post.body, forKeyPath: PostCoreDataModel.bodyKey)
         }
 
         do {
@@ -59,15 +59,15 @@ extension MainDataManager: MainDataManagerProtocol {
     
     private func loadPostsFromCoreData() -> [Post]? {
         var posts: [NSManagedObject] = []
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Posts")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: PostCoreDataModel.entityName)
 
         do {
             posts = try managedContext.fetch(fetchRequest)
             return posts.map {
-                Post(userId: $0.value(forKeyPath: "userId") as? Int ?? 0,
-                     id: $0.value(forKeyPath: "id") as? Int ?? 0,
-                     title: $0.value(forKeyPath: "title") as? String ?? "",
-                     body: $0.value(forKeyPath: "body") as? String ?? "")
+                Post(userId: $0.value(forKeyPath: PostCoreDataModel.userIdKey) as? Int ?? 0,
+                     id: $0.value(forKeyPath: PostCoreDataModel.idKey) as? Int ?? 0,
+                     title: $0.value(forKeyPath: PostCoreDataModel.titleKey) as? String ?? "",
+                     body: $0.value(forKeyPath: PostCoreDataModel.bodyKey) as? String ?? "")
             }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -76,7 +76,7 @@ extension MainDataManager: MainDataManagerProtocol {
     }
     
     private func clearCoreDataPosts() {
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Posts")
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: PostCoreDataModel.entityName)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
 
         do {
